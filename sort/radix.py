@@ -1,7 +1,7 @@
 
 def radix_sort(data):
     digits = len(str(max(data)))
-    data = ["{:02d}".format(i) for i in data]
+    data = ["{:0"+digits+"d}".format(i) for i in data]
     for digit_pos in range(digits-1, -1, -1):
         new_digits = []
         for i in range(10):
